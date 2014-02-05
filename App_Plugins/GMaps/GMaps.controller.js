@@ -15,18 +15,21 @@
 
         function initializeMap() {
 
-            var location = $scope.model.value;
-            
+            var location = $scope.model.value,
+                defaultLat = $scope.model.config.lat,
+                defaultLng = $scope.model.config.lng,
+                defaultZoomLvl = parseInt($scope.model.config.zoomlevel);
+
             if (location != '') {
                 var latLngArray = location.split(',');
 
                 mapCenter = new google.maps.LatLng(latLngArray[0], latLngArray[1]);
             } else {
-                mapCenter = new google.maps.LatLng('51.0441581', '3.4609621');
+                mapCenter = new google.maps.LatLng(defaultLat, defaultLng);
             }
             
             var mapElement = document.getElementById($scope.model.alias + '_map');
-            var mapOptions = { zoom: 15, center: mapCenter, mapTypeId: google.maps.MapTypeId.ROADMAP };
+            var mapOptions = { zoom: defaultZoomLvl, center: mapCenter, mapTypeId: google.maps.MapTypeId.ROADMAP };
 
             geocoder = new google.maps.Geocoder();
             map = new google.maps.Map(mapElement, mapOptions);
