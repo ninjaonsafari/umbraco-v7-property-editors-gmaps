@@ -20,6 +20,8 @@
                 defaultLng = $scope.model.config.lng,
                 defaultZoomLvl = parseInt($scope.model.config.zoomlevel);
 
+            $scope.resetTxt = $scope.model.config.resetTxt;
+
             if (location != '') {
                 var latLngArray = location.split(',');
 
