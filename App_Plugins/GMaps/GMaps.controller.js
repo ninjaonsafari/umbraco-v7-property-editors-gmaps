@@ -147,4 +147,8 @@
                 }
             });
         }
+
+        //Loading the styles
+        assetsService.loadCss("/app_plugins/GMaps/assets/css/gmaps.css");
+
     });
