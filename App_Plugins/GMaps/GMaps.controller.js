@@ -130,11 +130,15 @@
 
             geocoder.geocode({ 'latLng': latLng }, function (results, status) {
 
+            //Fetches the translations from the view - it's a bit of a hack currently. It's also run each time a change happens
+            var geoCodeError = document.getElementById("geoCodeError").innerText,
+                locationSet = document.getElementById("locationSet").innerText;
+
                 if (status == google.maps.GeocoderStatus.OK) {
                     var location = results[0].formatted_address;
 
                     $rootScope.$apply(function () {
-                        notificationsService.success("Location set to", location);
+                        notificationsService.success(locationSet, location);
                         
                         var newLat = marker.getPosition().lat();
                         var newLng = marker.getPosition().lng();
@@ -143,7 +147,7 @@
                         $scope.formattedAddress = location + ' (' + newLat + "," + newLng + ')';
                     });
                 } else {
-                    notificationsService.error("Oops! Having trouble geocoding specified address! Please try again.");
+                    notificationsService.error(geoCodeError);
                 }
             });
         }
