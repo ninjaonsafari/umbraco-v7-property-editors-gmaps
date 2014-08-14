@@ -1,5 +1,5 @@
 {
-	"geoCodeError":"Oops! Having trouble geocoding specified address! Please try again.",
-	"locationSet":"Location set to",
-	"resetTxt":"Reset position"
+	"geoCodeError":"Oops! Adresse konnte nicht gefunden werden!",
+	"locationSet":"Standort gesetzt auf",
+	"resetTxt":"Position zurücksetzten"
 }
