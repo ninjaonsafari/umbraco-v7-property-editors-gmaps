@@ -62,6 +62,12 @@
 
             //Calls the resetMap() function
             google.maps.event.addDomListener(resetBtn,'click',resetMap);
+
+            $('a[data-toggle="tab"]').on('shown', function (e) {
+                var center = map.getCenter();
+                google.maps.event.trigger(map, 'resize');
+                map.setCenter(center);
+            });
         }
 
         function resetMap () {
