@@ -12,9 +12,12 @@ Installation
 
 1. Build the solution, drop the assembly in the bin folder of your Umbraco v7 installation
 2. Drop the App_Plugins folder from this repo into the corresponding folders of your Umbraco v7 installation
-3. Create a new datatype of type "Google Maps w/ Google Places Autocomplete lookup" and add a property of this new datatype in any of your document types.
-4. Type in a location in the textbox and wait for Google suggestion...
-5. Hit ENTER or TAB and watch the magic.
+
+-then-
+
+1. Create a new datatype of type "Google Maps w/ Google Places Autocomplete lookup" and add a property of this new datatype in any of your document types.
+2. Type in a location in the textbox and wait for Google suggestion...
+3. Hit ENTER or TAB and watch the magic.
 
 Bugs, feedback or suggestions
 ===
