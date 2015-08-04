@@ -12,7 +12,7 @@
             defaultLng = $scope.model.config.lng,
             defaultZoomLvl = parseInt($scope.model.config.zoomlevel);
 
-        assetsService.loadJs('http://www.google.com/jsapi')
+        assetsService.loadJs('//www.google.com/jsapi')
             .then(function () {
                 google.load("maps", "3", { callback: initializeMap, other_params: "sensor=false&libraries=places" });
             });
